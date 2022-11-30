@@ -12,7 +12,7 @@ local Clear = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 
 headhunter.Name = "headhunter"
-headhunter.Parent = game.Players.LocalPlayer.PlayerGui
+headhunter.Parent = game.CoreGui
 headhunter.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 headhunter.ResetOnSpawn = false
 
