@@ -10,9 +10,12 @@ local Execute = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local Clear = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
+local Close = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
 
 headhunter.Name = "headhunter"
-headhunter.Parent = game.CoreGui
+headhunter.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 headhunter.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 headhunter.ResetOnSpawn = false
 
@@ -20,8 +23,8 @@ Frame.Parent = headhunter
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.284528315, 0, 0.351851851, 0)
 Frame.Size = UDim2.new(0.429811329, 0, 0.296296299, 0)
-Frame.Draggable = true
 Frame.Active = true
+Frame.Draggable = true
 
 UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = Frame
@@ -95,6 +98,46 @@ end)
 
 UICorner_3.CornerRadius = UDim.new(0, 5)
 UICorner_3.Parent = Clear
+
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.964003503, 0, 0.0166666675, 0)
+Close.Size = UDim2.new(0.0228270404, 0, 0.0500000007, 0)
+Close.Font = Enum.Font.Gotham
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.MouseButton1Click:Connect(function()
+	Open.Visible = not Open.Visible
+	Frame.Visible = not Frame.Visible
+end)
+
+Open.Name = "Open"
+Open.Parent = headhunter
+Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Open.BackgroundTransparency = 0.600
+Open.Position = UDim2.new(0.482264161, 0, 0.471604913, 0)
+Open.Size = UDim2.new(0.0343396217, 0, 0.055555556, 0)
+Open.Visible = false
+Open.Font = Enum.Font.GothamBlack
+Open.Text = "HH"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+Open.Active = true
+Open.Draggable = true
+Open.MouseButton1Click:Connect(function()
+	Open.Visible = not Open.Visible
+	Frame.Visible = not Frame.Visible
+end)
+
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = Open
 
 TextBox:GetPropertyChangedSignal("Text"):Connect(function()
 	local lines = 0
