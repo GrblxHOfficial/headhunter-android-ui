@@ -21,8 +21,8 @@ headhunter.ResetOnSpawn = false
 
 Frame.Parent = headhunter
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.Position = UDim2.new(0.284528315, 0, 0.351851851, 0)
-Frame.Size = UDim2.new(0.429811329, 0, 0.296296299, 0)
+Frame.Position = UDim2.new(0.1, 0, 0.15, 0)
+Frame.Size = UDim2.new(0.8, 0, 0.7, 0)
 Frame.Active = true
 Frame.Draggable = true
 
