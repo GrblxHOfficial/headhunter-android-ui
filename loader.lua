@@ -1,3 +1,18 @@
+-- some math
+local X = workspace.CurrentCamera.ViewportSize.X
+local Y = workspace.CurrentCamera.ViewportSize.Y
+local diff = X - Y
+if diff < 0 then
+	return
+end
+local FrameSize
+if diff > 400 then
+	FrameSize = UDim2.new(0.8, 0, diff * (X / Y) / 1000, 0)
+else
+	FrameSize = UDim2.new(0.8, 0, 0.7, 0)
+end
+
+
 -- headhunter android ui
 
 local headhunter = Instance.new("ScreenGui")
@@ -15,14 +30,14 @@ local Open = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 
 headhunter.Name = "headhunter"
-headhunter.Parent = game:GetService("CoreGui")
+headhunter.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 headhunter.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 headhunter.ResetOnSpawn = false
 
 Frame.Parent = headhunter
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.1, 0, 0.15, 0)
-Frame.Size = UDim2.new(0.8, 0, 0.7, 0)
+Frame.Size = FrameSize
 Frame.Active = true
 Frame.Draggable = true
 
