@@ -30,7 +30,7 @@ local Open = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 
 headhunter.Name = "headhunter"
-headhunter.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+headhunter.Parent = game:GetService("CoreGui")
 headhunter.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 headhunter.ResetOnSpawn = false
 
