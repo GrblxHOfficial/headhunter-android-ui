@@ -8,6 +8,8 @@ end
 local FrameSize
 if diff > 700 then
 	FrameSize = UDim2.new(0.5, 0, 0.4, 0)
+elseif diff > 500 then
+	FrameSize = UDim2.new(0.8, 0, (diff * (X / Y) / 1000) - 0.1, 0)
 elseif diff > 400 then
 	FrameSize = UDim2.new(0.8, 0, diff * (X / Y) / 1000, 0)
 else
