@@ -139,6 +139,7 @@ Open.Name = "Open"
 Open.Parent = headhunter
 Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Open.BackgroundTransparency = 0.600
+Opem.TextTransparency = 0.500
 Open.Position = UDim2.new(0.482264161, 0, 0.471604913, 0)
 Open.Size = UDim2.new(0.0343396217, 0, 0.055555556, 0)
 Open.Visible = false
@@ -155,7 +156,7 @@ Open.MouseButton1Click:Connect(function()
 	Frame.Visible = not Frame.Visible
 end)
 
-UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.CornerRadius = UDim.new(0, 50)
 UICorner_4.Parent = Open
 
 TextBox:GetPropertyChangedSignal("Text"):Connect(function()
