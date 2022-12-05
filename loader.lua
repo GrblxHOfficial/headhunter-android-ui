@@ -160,11 +160,9 @@ UICorner_4.Parent = Open
 
 TextBox:GetPropertyChangedSignal("Text"):Connect(function()
 	local lines = 0
-	local cur = 0
 	local glines = TextBox.Text:gmatch("\n")
 	while true do
-		cur = glines()
-		if cur == nil then
+		if glines() == nil then
 			break
 		else
 			lines += 1
